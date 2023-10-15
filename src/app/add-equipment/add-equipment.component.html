@@ -1,0 +1,19 @@
+<div class="add-equipment-container">
+  <h1 ty>New Equipment</h1>
+
+  <form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newEquipment.name" required>
+    </div>
+    <div class="form-group">
+      <label for="serialNumber">Serial Number:</label>
+      <input type="text" id="serialNumber" name="serialNumber" [(ngModel)]="newEquipment.serialNumber" required>
+    </div>
+
+    <div class="button-container">
+      <button class="return-button" (click)="return()">Return</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>

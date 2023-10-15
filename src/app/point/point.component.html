@@ -1,0 +1,15 @@
+<h1>Point List</h1>
+
+<!-- <button (click)="goToPointForm()">Create New Point</button> -->
+
+<ul>
+  <li *ngFor="let point of pointList">
+    <span>{{ point.name }}</span>
+    <span>{{ point.dataType }}</span>
+    <span>{{ point.value }}</span>
+    <span>{{ point.equipment }}</span>
+
+    <!-- <button (click)="editPoint(point)">Edit</button> -->
+    <!-- <button (click)="deletePoint(point)">Delete</button> -->
+  </li>
+</ul>

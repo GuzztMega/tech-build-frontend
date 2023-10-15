@@ -1,0 +1,23 @@
+<div class="equipment-list-container">
+  <div class="page-header">
+    <span class="span-header">Equipments</span>
+    <button class="create-button" (click)="addEquipment()">New Equipment</button>
+  </div>
+
+  <ul class="equipment-list">
+    <li class="equipment-header">
+      <span class="equipment-info">Name</span>
+      <span class="equipment-info">Serial Number</span>
+      <span class="equipment-info">Actions</span>
+    </li>
+    <li *ngFor="let equipment of equipmentList" class="equipment-item">
+      <span class="equipment-info">{{ equipment.name }}</span>
+      <span class="equipment-info">{{ equipment.serialNumber }}</span>
+
+      <div class="actions">
+        <button class="edit-button" (click)="editEquipment(equipment)">Edit</button>
+        <button class="delete-button" (click)="deleteEquipment(equipment)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
